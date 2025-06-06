@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Portfólio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Olá! Eu sou <span class="highlight">Seu Nome</span></h1>
+            <p>Desenvolvedor Web & Designer</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">Ver Projetos</a>
+                <a href="#contact" class="cta-button secondary">Fale Comigo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Sobre Mim</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Olá! Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com experiência em desenvolvimento web e design, busco sempre entregar projetos que combinem funcionalidade e estética.</p>
+                <p>Minha jornada na área de tecnologia começou há X anos, e desde então venho me especializando em criar experiências digitais únicas e memoráveis.</p>
+            </div>
+            <div class="skills">
+                <h3>Minhas Habilidades</h3>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Meus Projetos</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="project-grid">
+            <div class="project-card" data-category="web">
+                <img src="https://via.placeholder.com/300x200" alt="E-commerce">
+                <h3>E-commerce</h3>
+                <p>Plataforma de vendas online com sistema de pagamentos integrado</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="https://via.placeholder.com/300x200" alt="Blog Pessoal">
+                <h3>Blog Pessoal</h3>
+                <p>Blog com sistema de gerenciamento de conteúdo personalizado</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <img src="https://via.placeholder.com/300x200" alt="App de Gestão">
+                <h3>App de Gestão</h3>
+                <p>Aplicativo mobile para gestão de tarefas e projetos</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <img src="https://via.placeholder.com/300x200" alt="Portfólio de Design">
+                <h3>Portfólio de Design</h3>
+                <p>Galeria de trabalhos de design gráfico e UI/UX</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="https://via.placeholder.com/300x200" alt="Dashboard">
+                <h3>Dashboard</h3>
+                <p>Painel administrativo com gráficos e relatórios</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <img src="https://via.placeholder.com/300x200" alt="App de Delivery">
+                <h3>App de Delivery</h3>
+                <p>Aplicativo de entrega de comida com rastreamento em tempo real</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <img src="https://via.placeholder.com/300x200" alt="Identidade Visual">
+                <h3>Identidade Visual</h3>
+                <p>Projeto de branding e identidade visual para empresa</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="https://via.placeholder.com/300x200" alt="Sistema de Agendamento">
+                <h3>Sistema de Agendamento</h3>
+                <p>Plataforma web para agendamento de serviços</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">Ver Demo</a>
+                    <a href="#" class="project-link">Código</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Vamos Conversar?</h2>
+        <div class="contact-content">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Seu Nome">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Seu Email">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Seu WhatsApp (opcional)">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder="Sua Mensagem"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 nexigonprime. Todos os direitos reservados.</p>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

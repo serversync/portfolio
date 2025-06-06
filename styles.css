@@ -1,0 +1,627 @@
+/* Reset and Base Styles */
+/* Estilos de reset e base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Light mode variables */
+    /* Variáveis do modo claro */
+    --primary-color: #388e3c; /* Um verde um pouco mais suave */
+    --secondary-color: #2e7d32; /* Um verde mais escuro para hover */
+    --text-color: #333; /* Texto mais escuro para contraste */
+    --light-bg: #f4f7f6; /* Fundo levemente diferente */
+    --white: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0; /* Borda mais suave */
+    --input-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+    --highlight-color: #fbc02d; /* Amarelo um pouco mais vibrante */
+}
+
+[data-theme="dark"] {
+    /* Dark mode variables */
+    /* Variáveis do modo escuro */
+    --primary-color: #66bb6a; /* Verde mais claro para dark mode */
+    --secondary-color: #81c784;
+    --text-color: #e0e0e0; /* Texto claro */
+    --light-bg: #212121; /* Fundo escuro */
+    --white: #303030; /* Cor de 'white' no dark mode */
+    --card-bg: #424242; /* Fundo de card escuro */
+    --border-color: #5a5a5a; /* Borda escura */
+    --input-bg: #5a5a5a;
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Sombra no dark mode */
+    --highlight-color: #ffeb3b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Aplicando a fonte Poppins */
+    line-height: 1.7; /* Ajustando line height */
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header and Navigation */
+/* Cabeçalho e Navegação */
+header {
+    position: fixed;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 15px var(--shadow-color); /* Sombra um pouco maior */
+    z-index: 1000;
+    padding: 0.8rem 5%; /* Ajustando padding */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.6rem; /* Ajustando tamanho */
+    font-weight: 600; /* Peso da fonte */
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem; /* Ajustando espaçamento */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 28px; /* Ajustando tamanho */
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 6px; /* Ajustando margem */
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+/* Seção Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+    padding: 0 2rem; /* Ajustando padding */
+}
+
+.hero-content h1 {
+    font-size: 3.8rem; /* Ajustando tamanho */
+    margin-bottom: 1.5rem; /* Ajustando margem */
+    color: var(--text-color);
+    font-weight: 700; /* Peso da fonte */
+}
+
+.hero-content p {
+    font-size: 1.3rem; /* Ajustando tamanho */
+    margin-bottom: 2.5rem; /* Ajustando margem */
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: 700; /* Peso da fonte */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem; /* Ajustando espaçamento */
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.1rem 2.5rem; /* Ajustando padding */
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px; /* Bordas mais arredondadas */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* About Section */
+/* Seção Sobre */
+.about {
+    padding: 6rem 1rem; /* Ajustando padding */
+    background-color: var(--white);
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 4rem; /* Ajustando margem */
+    font-size: 3rem; /* Ajustando tamanho */
+    font-weight: 700;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem; /* Ajustando espaçamento */
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem; /* Ajustando margem */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.skills h3 {
+    margin-bottom: 1.5rem; /* Ajustando margem */
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem; /* Ajustando espaçamento */
+}
+
+.skill-tags span {
+    padding: 0.6rem 1.2rem; /* Ajustando padding */
+    background-color: var(--light-bg);
+    border-radius: 25px; /* Bordas mais arredondadas */
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.skill-tags span:hover {
+     transform: translateY(-3px);
+}
+
+/* Project Filters */
+/* Filtros de Projetos */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem; /* Ajustando margem */
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.8rem; /* Ajustando padding */
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 30px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+/* Seção Projetos */
+.projects {
+    padding: 6rem 1rem; /* Ajustando padding */
+    background-color: var(--light-bg);
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 4rem; /* Ajustando margem */
+    font-size: 3rem; /* Ajustando tamanho */
+    font-weight: 700;
+}
+
+/* Projects Grid Updates */
+/* Atualizações da Grade de Projetos */
+.project-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* Ajustando espaçamento */
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.project-grid .project-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px var(--shadow-color); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    border: 1px solid var(--border-color);
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+.project-grid .project-card.hidden {
+    opacity: 0;
+    transform: scale(0.95); /* Escala um pouco menos ao esconder */
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.project-grid .project-card img {
+    width: 100%;
+    height: 220px; /* Ajustando altura da imagem */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-grid .project-card:hover img {
+    transform: scale(1.08); /* Aumentando zoom no hover */
+}
+
+.project-grid .project-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.6rem; /* Ajustando tamanho */
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.project-grid .project-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.05rem;
+}
+
+/* Project Links Updates */
+/* Atualizações dos Links de Projeto */
+.project-links {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem; /* Ajustando espaçamento */
+    border-top: 1px solid var(--border-color);
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600; /* Peso da fonte */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* Ajustando espaçamento */
+    transition: color 0.3s ease;
+    font-size: 1.05rem;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+.project-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+    transform: translateX(8px); /* Aumentando o movimento da seta */
+}
+
+/* Contact Section */
+/* Seção Contato */
+.contact {
+    padding: 6rem 1rem; /* Ajustando padding */
+    background-color: var(--white);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 4rem; /* Ajustando margem */
+    font-size: 3rem; /* Ajustando tamanho */
+    font-weight: 700;
+}
+
+/* Contact Form Updates */
+/* Atualizações do Formulário de Contato */
+.contact-content {
+    max-width: 700px; /* Ajustando largura máxima */
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.8rem; /* Ajustando margem */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.2rem; /* Ajustando padding */
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Bordas mais arredondadas */
+    font-size: 1.05rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    height: 180px; /* Ajustando altura */
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(56, 134, 60, 0.2); /* Ajustando sombra do foco */
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.2rem 3rem; /* Ajustando padding */
+    border: none;
+    border-radius: 30px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Social Links Updates */
+/* Atualizações dos Links Sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* Ajustando espaçamento */
+    margin-top: 2.5rem; /* Ajustando margem */
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 2rem; /* Ajustando tamanho */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Footer */
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2.5rem; /* Ajustando padding */
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+/* Design Responsivo */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        /* display: none; */ /* Não remover completamente para animação */
+        position: absolute;
+        right: 0;
+        top: 8vh; /* Ajustar conforme a altura do header */
+        height: 92vh;
+        background-color: var(--white); /* Fundo no menu mobile */
+        display: flex; /* Manter flex para o layout interno */
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding: 2rem 0;
+        z-index: 999; /* Abaixo do header */
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Ajustando espaçamento */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Ajustando tamanho */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        width: 80%;
+    }
+
+    .cta-button.secondary {
+        width: 80%;
+    }
+
+    .project-filters {
+        gap: 0.8rem; /* Ajustando espaçamento */
+        margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustando min-width */
+        gap: 2rem; /* Ajustando espaçamento */
+    }
+
+    .project-grid .project-card img {
+         height: 200px;
+    }
+
+    .contact-content {
+        max-width: 95%;
+    }
+
+    input, textarea {
+         font-size: 1rem;
+    }
+
+    .submit-btn {
+         font-size: 1rem;
+         padding: 1rem 2rem;
+    }
+
+    .social-link {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation for mobile menu */
+/* Animação para menu mobile */
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* Animação dos links do menu mobile */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Burger Icon Animation */
+/* Animação do Ícone Burger */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-6px, -7px);
+}
+
+/* Theme Toggle Button */
+/* Botão de Alternar Tema */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+/* Animação de entrada das seções */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+} 
